@@ -43,14 +43,19 @@ section {
     margin: 40px 0 0 0;
 }
 
-nav a, p a {
+nav a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+nav a.selected, p a {
     color: var(--text);
     text-decoration: none;
     border-bottom: 3px solid var(--highlight);
 }
 
 nav a:hover, p a:hover {
-    border-bottom: none;
+    border-bottom: 3px solid var(--highlight);
 }
 
 h1, h2, h3 {font-weight: var(--font-weight);}
@@ -70,6 +75,10 @@ h3 {
 
 p.readmore {
     font-weight: 700;
+}
+
+p.readmore:hover {
+    color: var(--highlight);
 }
 
 p.readmore:after {
@@ -99,20 +108,28 @@ div.circle {
     border-radius: 50%;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 1280px) {
 
-    div.post img {
-        width: 100%;
-    }
+    div.circle {
+        bottom: -175px;
+        right: -175px;
+        width: 350px;
+        height: 350px;
+        }
 }
 
-@media (max-width: 800px) {
-    div.circle {
-    bottom: -125px;
-    right: -125px;
-    width: 250px;
-    height: 250px;
+@media (max-width: 930px) {
+
+    img {
+        width: 100%;
     }
+
+    div.circle {
+        bottom: -125px;
+        right: -125px;
+        width: 250px;
+        height: 250px;
+        }
 }
 
 div.post {
@@ -126,8 +143,13 @@ div.post {
         margin-bottom: 40px;
     }
 
-    img {
-        max-width: 780px;
-    }
+}
 
+img {
+    max-width: 780px;
+}
+
+*::selection {
+    background-color: var(--highlight);
+    color: var(--background);
 }
