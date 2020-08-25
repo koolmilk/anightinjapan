@@ -21,10 +21,12 @@ body {
 
     font-family: var(--typography), Arial;
     font-weight: 300;
-    line-height: 1.3;
+    line-height: 1.5;
 
     max-width: 780px;
     margin: 80px auto;
+
+    padding: 0 40px;
 }
 
 header {
@@ -45,6 +47,10 @@ nav a, p a {
     color: var(--text);
     text-decoration: none;
     border-bottom: 3px solid var(--highlight);
+}
+
+nav a:hover, p a:hover {
+    border-bottom: none;
 }
 
 h1, h2, h3 {font-weight: var(--font-weight);}
@@ -93,6 +99,35 @@ div.circle {
     border-radius: 50%;
 }
 
-img {
-    width: 100%;
+@media (max-width: 930px) {
+
+    div.post img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    div.circle {
+    bottom: -125px;
+    right: -125px;
+    width: 250px;
+    height: 250px;
+    }
+}
+
+div.post {
+    
+    h3 {
+        margin-top: 80px;
+    }
+
+    p {
+        max-width: 540px;
+        margin-bottom: 40px;
+    }
+
+    img {
+        max-width: 780px;
+    }
+
 }
