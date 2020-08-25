@@ -2,6 +2,7 @@
 title: About
 permalink: "/about/"
 layout: default
+order: 3
 ---
 
 ![about.jpg](/uploads/about.jpg)
